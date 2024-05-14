@@ -3,6 +3,22 @@
     "banner": {
       "type": "banner",
       "settings": {}
+    },
+    "three-images": {
+      "type": "three-images",
+      "settings": {}
+    },
+    "more-info": {
+      "type": "more-info",
+      "settings": {}
+    },
+    "baall-collections": {
+      "type": "all-collections",
+      "settings": {}
+    },
+    "app-products": {
+      "type": "banner",
+      "settings": {}
     }
   },
   "order": ["banner"]
