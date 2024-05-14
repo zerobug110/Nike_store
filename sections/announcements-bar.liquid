@@ -1,12 +1,80 @@
-  {% if section.settings['announcements-bar'] %}
-    <section>Announcement bar</section>
+  {% if section.settings['show-announcement'] %}
+    <section>
+        <div class="announcement-bar">
+            <div class="announcement-bar-left-section">
+                {% if section.settings.image != blank %}
+                    <img 
+                        width="30"
+                        height="40"
+                        loading="lazy"
+                         src="{{ section.settings.image | image_url }}"/>
+                    {% else %}
+                    <img 
+                    width="30"
+                    height="40"
+                    loading="lazy"
+                     src="{{ 'a.png' | asset_url }}"/>
+                {% endif %}
+                {% if section.settings.image2 != blank %}
+                    <img 
+                        width="30"
+                        height="40"
+                        loading="lazy"
+                         src="{{ section.settings.image2 | image_url }}"/>
+                    {% else %}
+                    <img 
+                    width="30"
+                    height="40"
+                    loading="lazy"
+                     src="{{ 'b.png' | asset_url }}"/>
+                {% endif %}
+            </div>
+            <div class="announcement-bar-right-section"></div>
+        </div>
+    </section>
   {% endif %}
+
+  <style>
+    .announcement-bar {
+        background: : {{section.settings.background}};
+        color: {{section.settings.text_color}}
+    }
+  </style>
 
   {% schema  %} 
   {
     "name": "announcements-bar",
     "settings": [
-        {"type": "checkbox", "id": "show-announcement", "label": "Show Announcement", "default": true}
+        {
+            "type": "checkbox", 
+            "id": "show-announcement", 
+            "label": "Show Announcement", 
+            "default": true
+        },
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "pick image",
+            "info": "png recommended format"
+        },
+        {
+            "type": "image_picker",
+            "id": "image2",
+            "label": "pick image",
+            "info": "png recommended format"
+        },
+        {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#F4F4F4"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text",
+            "default": "#000000"
+        }
     ]
   }
  {% endschema %}
