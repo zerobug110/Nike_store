@@ -6,9 +6,9 @@
     </div>
     <div class="">
         <ul class="middlea-nav-bar">
-            {% for link in linklists['mainmenu'].links %}
-                <li>{{ link.title | link_to: link.url}}</li>
-            {% endfor %}
+            {%- for link in linklists['main-menu'].links %}
+                <li>{{ link.title | link_to: link.url }}</li>
+            {%- endfor %}
         </ul>
     </div>
     <div class=""></div>
