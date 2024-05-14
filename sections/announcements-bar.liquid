@@ -50,7 +50,8 @@
 
                         {% else %}
                             {% for block in section.block %}
-                            <li> <a href="{{ block.settings.link  }}">{{ block.settings.text  }}</a></li>
+                            <li> 
+                                <a href="{{ block.settings.link  }}">{{ block.settings.text  }}</a></li>
                             {% endfor %}
                     {% endif %}
                 </ul>
