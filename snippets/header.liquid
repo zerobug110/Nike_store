@@ -4,6 +4,12 @@
             <img width="80" height="50" loading="lazy" src="{{'nike.png' |  asset_url}}" alt="">
         </a>
     </div>
-    <div class=""></div>
+    <div class="">
+        <ul class="middlea-nav-bar">
+            {% for link in linklists['mainmenu'].links %}
+                <li>{{ link.title | link_to: link.url}}</li>
+            {% endfor %}
+        </ul>
+    </div>
     <div class=""></div>
 </header>
