@@ -1,5 +1,5 @@
 {% if section.settings['show-announcement'] %}
-    <section>
+    <section class="">
         <div class="announcements-bar">
             <div class="announcement-bar-left-section">
                 {% if section.settings.image != blank %}
@@ -34,7 +34,7 @@
 
         <style>
             .announcements-bar {
-                background: {{ section.settings.background }};
+                background-color: {{ section.settings.background }};
                 color: {{ section.settings.text_color }};
             }
         </style>
