@@ -4,7 +4,7 @@
       "announcements-bar": {
         "type": "announcements-bar",
         "custom_css": [
-          ".announcement-bar {background-color: \"red\";}"
+          ".announcements-bar {background-color: \"red\";}"
         ],
         "settings": {
           "show-announcement": true,
