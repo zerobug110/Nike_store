@@ -1,8 +1,32 @@
-<section>Hello world</section>
+<section>
+    <div class="banner-wrapper">
+        Hello world
+    </div>
+</section>
+<style>
+    .banner-wrapper {
+        background-color: {{ section.settings.background }};
+        color: {{ section.settings.text_color }};
+    }
+</style>
+
 {% schema  %} 
 {
     "name": "Banner",
-    "settings":[]
+    "settings":[
+        {
+            "type": "color",
+            "id": "background",
+            "label": "Background",
+            "default": "#F4F4F4"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#000000"
+        } 
+    ]
 
 }
  {% endschema %} 
