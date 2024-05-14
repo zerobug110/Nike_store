@@ -1,6 +1,8 @@
 <section>
     <div class="banner-wrapper">
-        Hello world
+        <div class="slide-text" id="text1">Member: Free Shipping</div>
+        <div class="slide-text" id="text2">Save up to 40%</div>
+        <div class="slide-text" id="text3"> Get Your Gear Faster</div>
     </div>
 </section>
 <style>
@@ -8,7 +10,24 @@
         background-color: {{ section.settings.background }};
         color: {{ section.settings.text_color }};
     }
+    .slide-text {
+        position: absolute;
+        top: 155px;
+        left: -150%;
+        transform: translate(0, -50%);
+        color: black;
+        padding: 20px;
+        font-size: 20px;
+        transition: left 0.5s ease-in-out ;
+    }
 </style>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const text1 = document.getElementById('text1')
+        const text1 = document.getElementById('text2')
+        const text1 = document.getElementById('text3')
+    })
+</script>
 
 {% schema  %} 
 {
