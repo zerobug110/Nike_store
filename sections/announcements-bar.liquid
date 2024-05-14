@@ -1,4 +1,4 @@
-  {% if section.settings['show-announcement'] %}
+{% if section.settings['show-announcement'] %}
     <section>
         <div class="announcements-bar">
             <div class="announcement-bar-left-section">
@@ -7,42 +7,42 @@
                         width="30"
                         height="40"
                         loading="lazy"
-                         src="{{ section.settings.image | image_url }}"/>
-                    {% else %}
+                        src="{{ section.settings.image | image_url }}"/>
+                {% else %}
                     <img 
-                    width="30"
-                    height="40"
-                    loading="lazy"
-                     src="{{ 'a.png' | asset_url }}"/>
+                        width="30"
+                        height="40"
+                        loading="lazy"
+                        src="{{ 'a.png' | asset_url }}"/>
                 {% endif %}
                 {% if section.settings.image2 != blank %}
                     <img 
                         width="30"
                         height="40"
                         loading="lazy"
-                         src="{{ section.settings.image2 | image_url }}"/>
-                    {% else %}
+                        src="{{ section.settings.image2 | image_url }}"/>
+                {% else %}
                     <img 
-                    width="30"
-                    height="40"
-                    loading="lazy"
-                     src="{{ 'b.png' | asset_url }}"/>
+                        width="30"
+                        height="40"
+                        loading="lazy"
+                        src="{{ 'b.png' | asset_url }}"/>
                 {% endif %}
             </div>
             <div class="announcement-bar-right-section"></div>
         </div>
+
+        <style>
+            .announcements-bar {
+                background: {{ section.settings.background }};
+                color: {{ section.settings.text_color }};
+            }
+        </style>
     </section>
-  {% endif %}
-  <style>
-    .announcements-bar {
-        background: : {{ section.settings.background }};
-        color: {{ section.settings.text_color }}
-    }
-  </style>
+{% endif %}
 
-
-  {% schema  %} 
-  {
+{% schema %}
+{
     "name": "announcements-bar",
     "settings": [
         {
@@ -54,13 +54,13 @@
         {
             "type": "image_picker",
             "id": "image",
-            "label": "pick image",
+            "label": "Pick Image",
             "info": "png recommended format"
         },
         {
             "type": "image_picker",
             "id": "image2",
-            "label": "pick image",
+            "label": "Pick Image",
             "info": "png recommended format"
         },
         {
@@ -72,9 +72,9 @@
         {
             "type": "color",
             "id": "text_color",
-            "label": "Text",
+            "label": "Text Color",
             "default": "#000000"
         }
     ]
-  }
- {% endschema %}
+}
+{% endschema %}
