@@ -1,5 +1,7 @@
+{{ 'header.css' | asset_url | stylesheet_tag }}
+
 <header class="header-nav">
-    <div class="left-nav-bar">
+    {% comment %} <div class="left-nav-bar">
         <a href="/">
             <img width="80" height="50" loading="lazy" src="{{'nike.png' |  asset_url}}" alt="">
         </a>
@@ -18,51 +20,22 @@
         <a href="/">
             <img width="40" height="40" loading="lazy" src="{{'d.png' |  asset_url}}" >
         </a>
+    </div> {% endcomment %}
+
+    <div class="header-nav">
+      <div class="header-nav-left">Select Categories</div>
+      <div class="header-nav-right">
+
+        <ul class="header-nav-right-menu">
+          <li class="header-nav-menu">Tyre Shop</li>
+          <li class="header-nav-menu"> Fluids & lubricants</li>
+          <li class="header-nav-menu">Batteries</li>
+          <li class="header-nav-menu">Tool</li>
+          <li class="header-nav-menu">Trucks</li>
+          <li class="header-nav-menu">Motocycles</li>
+          <li class="header-nav-menu">EV BAY</li>
+        </ul>
+      </div>
+     
     </div>
 </header>
-<style>
-
- .header-nav {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
-   margin: 0;
-   padding: 2px;
-   background-color: white;
- }
-
- .middle-nav-bar {
-   display: flex;
-   align-items: center;
-   gap: 20px;
-   list-style-type: none;
-   text-decoration: none;
-   font-size: 17px;
-   font-weight: bolder;
-  }
-  
-  .middle-nav-bar li {
-    padding: 10px;
-    list-style-type: none;
-  }
-  
-  .middle-nav-bar a {
-    padding: 10px;
-    list-style-type: none;
-    text-decoration: none;
-  } 
-
-  .right-nav-bar {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .search-nav {
-    padding: 10px;
-    margin-top: 20px;
-    border-radius: 10px;
-    border: none;
-    background-color: rgba(233,    232, 232);
-  }
-</style>

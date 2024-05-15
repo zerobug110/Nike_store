@@ -3,29 +3,11 @@
     "banner": {
       "type": "banner",
       "settings": {}
-    },
-    "three-images": {
-      "type": "three-images",
-      "settings": {}
-    },
-    "more-info": {
-      "type": "more-info",
-      "settings": {}
-    },
-    "all-collections": {
-      "type": "all-collections",
-      "settings": {}
-    },
-    "app-products": {
-      "type": "all-products",
-      "settings": {}
     }
   },
-  "order": [
-    "banner",
-    "three-images",
-    "more-infor",
-    "all-collections",
-    "all-products"
-  ]
+  "order": ["banner"]
 }
+
+
+
+

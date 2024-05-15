@@ -1,37 +1,22 @@
+{{ 'announcement.css' | asset_url | stylesheet_tag }}
+
 {% if section.settings['show-announcement'] %}
-    <section class="">
+    <section class="top-nav">
         <div class="announcements-bar">
             <div class="announcement-bar-left-section">
-                {% if section.settings.image != blank %}
-                    <img 
-                        width="30"
-                        height="40"
-                        loading="lazy"
-                        src="{{ section.settings.image | image_url }}"/>
-                {% else %}
-                    <img 
-                        width="30"
-                        height="40"
-                        loading="lazy"
-                        src="{{ 'a.png' | asset_url }}"/>
-                {% endif %}
-                {% if section.settings.image2 != blank %}
-                    <img 
-                        width="30"
-                        height="40"
-                        loading="lazy"
-                        src="{{ section.settings.image2 | image_url }}"/>
-                {% else %}
-                    <img 
-                        width="30"
-                        height="40"
-                        loading="lazy"
-                        src="{{ 'b.png' | asset_url }}"/>
-                {% endif %}
+                <div class="">
+                    <span class="announcement-welcome">
+                        👋 welcome to your online 
+                    </span>
+                    <span class="announcement-store-highlighter">store</span>
+                </div>
+                <div class="announcement-info">
+                    info@drivelync.com
+                </div>
             </div>
             <div class="announcement-bar-right-section">
                 <ul class="announcement-bar-inner-list">
-                    {% if section.block.size == 0 %}
+                    {% comment %} {% if section.block.size == 0 %}
                         <li>
                             <a href="#">Help</a>
                         </li>
@@ -53,16 +38,23 @@
                             <li> 
                                 <a href="{{ block.settings.link  }}">{{ block.settings.text  }}</a></li>
                             {% endfor %}
-                    {% endif %}
+                    {% endif %} {% endcomment %}
+                    <li class="top-nav-list">Corporate profile</li>
+                    <li class="top-nav-list"> customer Service</li>
+                    <li class="top-nav-list"> contact Us</li>
+                    <li class="top-nav-list">Blog</li>
+                    <li class="top-nav-list">Drivelync Club</li>
+                    <li class="top-nav-list">USD</li>
                 </ul>
             </div>
         </div>
 
         <style>
-            .announcements-bar {
+            .top-nav {
                 background-color: {{ section.settings.background }};
                 color: {{ section.settings.text_color }};
             }
+
         </style>
     </section>
 {% endif %}
@@ -93,7 +85,7 @@
             "type": "color",
             "id": "background",
             "label": "Background",
-            "default": "#F4F4F4"
+            "default": "#F6F6F6"
         },
         {
             "type": "color",
