@@ -1,6 +1,6 @@
 {{ 'header.css' | asset_url | stylesheet_tag }}
 
-<header class="header-nav">
+<header class="header">
     {% comment %} <div class="left-nav-bar">
         <a href="/">
             <img width="80" height="50" loading="lazy" src="{{'nike.png' |  asset_url}}" alt="">
@@ -21,6 +21,29 @@
             <img width="40" height="40" loading="lazy" src="{{'d.png' |  asset_url}}" >
         </a>
     </div> {% endcomment %}
+    <div class="notificaiton-nav">
+    <div class="nav-log">logo</div>
+    <div class="nav-serarch">
+        <form action ="/search">
+            <input class="search-nav" placeholder="search" type="search">
+            <button class="search-btn">
+                search
+            </button>
+        </form>
+    </div>
+    <div class="nav-notfications"> 
+        <div class="">bell</div>
+        <div class="">return</div>
+        <div class="">bage</div>
+        <div class="user-info">
+            <div class="avatar"></div>
+            <div class="user-profile">
+                <div class="welcome-user">welcome</div>
+                <div class="">Asraf DriveLync</div>
+            </div>
+        </div>
+    </div>
+</div>
 
     <div class="header-nav">
       <div class="header-nav-left">Select Categories</div>
@@ -38,4 +61,5 @@
       </div>
      
     </div>
+
 </header>

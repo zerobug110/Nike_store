@@ -2,6 +2,7 @@ body {
     background-color: "{{ settings.bg }}";
     padding: 0;
     margin: 0;
+    background-color: #F6F6F6;
 }
 .main-section {
    width: 110px;
