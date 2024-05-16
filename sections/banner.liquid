@@ -1,11 +1,11 @@
 {{ 'banner.css' | asset_url | stylesheet_tag }}
 <section>
-  <div class="grid-container">
-    <div class="large-item" style="background-image: url({{ settings.large_item_image | img_url: 'large' }});"></div>
-    <div class="small-item-1" style="background-image: url({{ settings.small_item_1_image | img_url: 'medium' }});"></div>
-    <div class="small-item-2" style="background-image: url({{ settings.small_item_2_image | img_url: 'medium' }});"></div>
-    <div class="small-item-3" style="background-image: url({{ settings.small_item_3_image | img_url: 'medium' }});"></div>
-  </div>
+    <div class="grid-container">
+        <div class="large-item" style="background-image: url({{ 'three.png' | asset_url }});"></div>
+        <div class="small-item-1" style="background-image: url({{ 'two.png' | asset_url }});"></div>
+        <div class="small-item-2" style="background-image: url({{ 'one.png' | asset_url }});"></div>
+        <div class="small-item-3" style="background-image: url({{ 'bann.jpeg' | asset_url }});"></div>
+      </div>
 </section>
 
 {% schema %}
